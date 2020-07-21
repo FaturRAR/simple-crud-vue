@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Simple VUE</title>
+</head>
+<body>
+    <div id="crud"> 
+        <p>input item: </p>
+        <input type="text" v-model='isi'>
+        <button @click='tambah'>+</button>
+        <ul v-for="item in items">
+            <li>
+                {{ item }}
+                <button @click='hapus()'>Hapus</button>
+                <button @click='edit()'>Edit</button>
+            </li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
